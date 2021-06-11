@@ -42,6 +42,6 @@ jobs:
         cd VirtualRepoFolder #To access the folder of interest in my virtual env
         ls
         cat myText.txt #Show content of file of interest
-        cd..
+        cd ..
         
     
