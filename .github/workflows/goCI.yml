@@ -33,7 +33,7 @@ jobs:
     - name: Checkout private repo remotely
       uses: actions/checkout@v2
       with:
-        repository: lowh2/GoSchoolRemoteExample #The hidden repo i amtrying to access
+        repository: lowkh2/GoSchoolRemoteExample #The hidden repo i amtrying to access
         path: VirtualRepoFolder #Folder to save to in my virtual env
         token: ${{ secrets.GO_SECRET }} #Pass to enter remote hidden repo
     
