@@ -49,5 +49,7 @@ jobs:
         go get github.com/franela/goblin #Add package for Goblin Testing
         go get github.com/tebeka/go2xunit #Add package for conversion
         go test -v #Command to run go rest
+        go test -v | go2xunit > report.xml #Run Test again and output as report.xml
+        ls #Verify that the report is indeed created
           
     
