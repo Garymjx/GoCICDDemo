@@ -51,5 +51,10 @@ jobs:
         go test -v #Command to run go rest
         go test -v | go2xunit > report.xml #Run Test again and output as report.xml
         ls #Verify that the report is indeed created
-          
+        
+    - name: Publish Unit Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v1 #Checkout Unit Test Reporting
+      if: always() #Always do it
+      with:
+        files: report.xml #Make use of a file we created
     
