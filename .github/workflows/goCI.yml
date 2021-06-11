@@ -58,6 +58,25 @@ jobs:
       with:
         files: report.xml #Make use of a file we created
         
+    - if: ${{ success() }}
+      name: Create upload directory
+      run: mkdir upload
+    
+    - name: Prepare Documents
+      run: mv report.xml ./upload
+      
+    - name: Prepare artifacts
+      uses: actions/upload-artifact@v2
+      with: 
+        name: assetDocuments
+        path: upload
+        
+    - name: Download Content
+      uses: actions/download-artifact@v2
+      with:
+        name: assetDocuments
+      
+        
     - if: ${{ failure() }}
       name: Create Issues Notifications
       uses: nashmaniac/create-issue-action@v1.1
