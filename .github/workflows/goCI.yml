@@ -39,7 +39,7 @@ jobs:
     
     - name: Show hidden files
       run: |
-        cd virtualRepoFolder #To access the folder of interest in my virtual env
+        cd VirtualRepoFolder #To access the folder of interest in my virtual env
         ls
         cat myText.txt #Show content of file of interest
         cd..
